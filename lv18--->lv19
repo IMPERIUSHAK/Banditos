@@ -1,0 +1,45 @@
+## Bandit Level 18 -> Level 19
+
+## Level Goal
+The password for the next level is stored in a file readme in the homedirectory. Unfortunately, someone has modified .bashrc to log you out when you log in with SSH.
+
+## Commands you may need to solve this level
+ssh ls cat
+Note:SSH does not just allows us to log into a machine remotely, but it also allows remote execution of commands by adding the commands after the common SSH expression.
+## Solution
+```
+  ┌──(usr->rt)-[~]
+  └─$ ssh bandit18@bandit.labs.overthewire.org -p 2220 ls
+  Connection closed by 16.171.91.169 port 2220
+                                                                                                                      
+  ┌──(usr->rt)-[~]
+  └─$ ssh bandit18@bandit.labs.overthewire.org -p 2220 ls
+                           _                     _ _ _   
+                          | |__   __ _ _ __   __| (_) |_ 
+                          | '_ \ / _` | '_ \ / _` | | __|
+                          | |_) | (_| | | | | (_| | | |_ 
+                          |_.__/ \__,_|_| |_|\__,_|_|\__|
+                                                         
+  
+                        This is an OverTheWire game server. 
+              More information on http://www.overthewire.org/wargames
+  
+  bandit18@bandit.labs.overthewire.org's password: 
+  readme
+                                                                                                                      
+  ┌──(usr->rt)-[~]
+  └─$ ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
+                           _                     _ _ _   
+                          | |__   __ _ _ __   __| (_) |_ 
+                          | '_ \ / _` | '_ \ / _` | | __|
+                          | |_) | (_| | | | | (_| | | |_ 
+                          |_.__/ \__,_|_| |_|\__,_|_|\__|
+                                                         
+  
+                        This is an OverTheWire game server. 
+              More information on http://www.overthewire.org/wargames
+  
+  bandit18@bandit.labs.overthewire.org's password: 
+  cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8 #password for lv19
+
+```                                       
